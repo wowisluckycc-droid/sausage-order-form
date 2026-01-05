@@ -46,57 +46,35 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="relative order-2 lg:order-1 mb-16 lg:mb-0">
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-orange-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-red-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob animation-delay-2000"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1544333346-64741744d03d?q=80&w=800&auto=format&fit=crop" 
-              alt="新鮮肉品處理"
-              className="relative rounded-[2.5rem] shadow-2xl z-10"
-            />
-            {/* 鄰里口碑 No.1 Badge */}
-            <div className="absolute -bottom-16 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden sm:block border border-orange-50 hover-lift">
-               <div className="flex items-center gap-3 text-red-800 mb-1">
-                 <Star size={18} fill="currentColor" />
-                 <Star size={18} fill="currentColor" />
-                 <Star size={18} fill="currentColor" />
-                 <Star size={18} fill="currentColor" />
-                 <Star size={18} fill="currentColor" />
-               </div>
-               <p className="text-stone-900 font-serif-tc font-bold">鄰里口碑 No.1</p>
-               <p className="text-stone-500 text-xs mt-1">「最推薦的高粱香腸！」</p>
-            </div>
+      {/* Philosophy Section - 移除圖片與裝飾，調整為置中文字 */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center space-y-8">
+          <div className="inline-flex items-center space-x-2 text-red-700 font-bold tracking-widest text-sm uppercase justify-center">
+            <span className="w-8 h-px bg-red-700"></span>
+            <span>Our Philosophy</span>
+            <span className="w-8 h-px bg-red-700"></span>
           </div>
-          <div className="space-y-8 order-1 lg:order-2">
-            <div className="inline-flex items-center space-x-2 text-red-700 font-bold tracking-widest text-sm uppercase">
-              <span className="w-8 h-px bg-red-700"></span>
-              <span>Our Philosophy</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-serif-tc font-bold text-stone-900 leading-snug">
-              我們不只是做香腸<br/>是在傳遞一份<span className="text-red-800">家的溫度</span>
-            </h2>
-            <div className="space-y-6 text-lg text-stone-600 leading-relaxed font-light">
-              <p>
-                「廖媽媽香腸」源於自家餐桌。為了讓孩子吃到最健康、最美味的香腸，我們在廚房裡反覆測試肉質比例與調味。
-              </p>
-              <div className="flex items-start gap-4 p-6 bg-orange-50 rounded-2xl border-l-4 border-red-700">
-                <Quote className="text-red-200 shrink-0" size={32} />
-                <p className="italic text-stone-700">
-                  「堅持選用合格溫體豬後腿肉，接單後才開始揉捏、灌製，確保每一口送到您嘴裡的都是最巔峰的新鮮狀態。」
-                </p>
-              </div>
-              <p>
-                不添加化學防腐劑、不使用廉價肉源。這是我們對每一位顧客的承諾。
+          <h2 className="text-4xl sm:text-5xl font-serif-tc font-bold text-stone-900 leading-snug">
+            我們不只是做香腸<br/>是在傳遞一份<span className="text-red-800">家的溫度</span>
+          </h2>
+          <div className="space-y-6 text-lg text-stone-600 leading-relaxed font-light max-w-2xl mx-auto">
+            <p>
+              「廖媽媽香腸」源於自家餐桌。為了讓孩子吃到最健康、最美味的香腸，我們在廚房裡反覆測試肉質比例與調味。
+            </p>
+            <div className="flex items-start gap-4 p-6 bg-orange-50 rounded-2xl border-l-4 border-red-700 text-left">
+              <Quote className="text-red-200 shrink-0" size={32} />
+              <p className="italic text-stone-700">
+                「堅持選用合格溫體豬後腿肉，接單後才開始揉捏、灌製，確保每一口送到您嘴裡的都是最巔峰的新鮮狀態。」
               </p>
             </div>
-            <div className="pt-4">
-              <Link to="/story" className="inline-flex items-center text-red-800 font-bold hover:underline underline-offset-8 transition-all">
-                了解完整的廖媽媽故事 <ChevronRight size={20} className="ml-1" />
-              </Link>
-            </div>
+            <p>
+              不添加化學防腐劑、不使用廉價肉源。這是我們對每一位顧客的承諾。
+            </p>
+          </div>
+          <div className="pt-4">
+            <Link to="/story" className="inline-flex items-center text-red-800 font-bold hover:underline underline-offset-8 transition-all">
+              了解完整的廖媽媽故事 <ChevronRight size={20} className="ml-1" />
+            </Link>
           </div>
         </div>
       </section>

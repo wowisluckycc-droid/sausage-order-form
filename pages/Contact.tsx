@@ -297,8 +297,8 @@ const Contact: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
                   { id: 'pickup', name: '現場自取', sub: '台中北屯熱河路', icon: <MapPin size={24} /> },
-                  { id: 'shipping', name: '冷凍宅配', sub: '黑貓低溫配送', icon: <Truck size={24} /> },
-                  { id: 'cvs', name: '冷凍超取', sub: '7-11/全家', icon: <Store size={24} /> }
+                  { id: 'shipping', name: '宅配', sub: '黑貓低溫配送', icon: <Truck size={24} /> },
+                  { id: 'cvs', name: '超取', sub: '7-11/全家', icon: <Store size={24} /> }
                 ].map(method => (
                   <div key={method.id} onClick={() => !isSubmitting && setFormData({...formData, deliveryMethod: method.id as any})} className={`p-6 rounded-[2rem] border-2 cursor-pointer transition-all flex flex-col items-center gap-2 ${formData.deliveryMethod === method.id ? 'bg-orange-50 border-red-800' : 'bg-stone-50 border-transparent hover:border-stone-200'}`}>
                     <div className={formData.deliveryMethod === method.id ? 'text-red-800' : 'text-stone-300'}>{method.icon}</div>
@@ -406,7 +406,7 @@ const Contact: React.FC = () => {
                   </div>
                 )}
 
-                {/* 僅在冷凍宅配 (shipping) 顯示年節提醒 */}
+                {/* 僅在宅配 (shipping) 顯示年節提醒 */}
                 {formData.deliveryMethod === 'shipping' && (
                   <div className="pt-6 border-t border-stone-200">
                     <div className="flex gap-3 bg-red-50 p-6 rounded-2xl border border-red-100">
